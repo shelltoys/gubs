@@ -6,10 +6,12 @@ import (
 	"io"
 	"os"
 
+	"github.com/andrew-d/go-termutil"
 	"github.com/dpritchett/gubs"
 )
 
 func trReader(reader *bufio.Reader) {
+
 	for {
 		line, err := reader.ReadString('\n')
 		if err == nil || err == io.EOF {
@@ -22,9 +24,16 @@ func trReader(reader *bufio.Reader) {
 	}
 }
 
+func promptOnceIfInteractive() {
+	if termutil.Isatty(os.Stdin.Fd()) {
+		fmt.Print("Ⓛ ⓔ ⓣ 'ⓢ  ⓜ ⓐ ⓚ ⓔ  ⓢ ⓞ ⓜ ⓔ  ⓑ ⓤ ⓑ ⓑ ⓛ ⓔ ⓢ !\n> ")
+	}
+}
+
 // StripStdin reads text from SDTIN and emits that same text minus any
 // ANSI escape codes.
 func TrStdin() {
+	promptOnceIfInteractive()
 	reader := bufio.NewReader(os.Stdin)
 	trReader(reader)
 }
