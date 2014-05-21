@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"strings"
 
 	"github.com/andrew-d/go-termutil"
 	"github.com/dpritchett/gubs"
@@ -15,7 +16,7 @@ func trReader(reader *bufio.Reader) {
 	for {
 		line, err := reader.ReadString('\n')
 		if err == nil || err == io.EOF {
-			fmt.Print(gubs.Tr(line))
+			fmt.Println(gubs.Tr(line))
 		}
 
 		if err != nil {
@@ -40,10 +41,11 @@ func TrStdin() {
 
 func main() {
 	if len(os.Args) > 1 {
+		results := ""
 		for _, str := range os.Args[1:] {
-
-			fmt.Print(gubs.Tr(str) + " ")
+			results += gubs.Tr(str) + " "
 		}
+		fmt.Print(strings.TrimSpace(results))
 	} else {
 		TrStdin()
 	}

@@ -25,5 +25,5 @@ func Tr(input string) string {
 		results += result
 	}
 
-	return results
+	return strings.TrimSpace(results)
 }

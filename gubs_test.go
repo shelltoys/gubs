@@ -7,7 +7,7 @@ var testTable = []struct {
 	after  string
 }{
 	{"hello, bubs!", "ⓗ ⓔ ⓛ ⓛ ⓞ , ⓑ ⓤ ⓑ ⓢ !"},
-	{"Zach Holman", "Ⓩ ⓐ ⓒ ⓗ  Ⓗ ⓞ ⓛ ⓜ ⓐ ⓝ "},
+	{"Zach Holman", "Ⓩ ⓐ ⓒ ⓗ  Ⓗ ⓞ ⓛ ⓜ ⓐ ⓝ"},
 }
 
 func TestBlubsTranslations(t *testing.T) {
