@@ -13,7 +13,7 @@ func trReader(reader *bufio.Reader) {
 	for {
 		line, err := reader.ReadString('\n')
 		if err == nil || err == io.EOF {
-			print(gubs.Tr(line) + "\n")
+			fmt.Print(gubs.Tr(line))
 		}
 
 		if err != nil {
