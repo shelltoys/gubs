@@ -1,4 +1,4 @@
-`gubs` is a Go clone of Zach Holman's `bubs`. It bubblerizes letters.
+`gubs` is a Go clone of Zach Holman's [bubs](https://github.com/holman/bubs). It bubblerizes letters.
 
 ## Example
 ```sh
