@@ -1,34 +1,28 @@
+// Package gubs translates alphanumeric characters into bubbly versions of themselves.
 package gubs
 
-import (
-	"regexp"
-	"strings"
-)
+import "strings"
 
-var matcher = regexp.MustCompile(`A-Za-z1-90`)
+var offsetMap = map[string]rune{
+	"abcdefghijklmnopqrstuvwxyz": (rune('ⓐ') - rune('a')),
+	"ABCDEFGHIJKLMNOPQRSTUVWXYZ": (rune('Ⓐ') - rune('A')),
+	"123456789":                  (rune('①') - rune('1')),
+	"0":                          (rune('⓪') - rune('0')),
+}
 
+// Tr translates a string into a bubbly string.
 func Tr(input string) string {
 	results := ""
 
-	lowers := "abcdefghijklmnopqrstuvwxyz"
-	uppers := "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-	positives := "123456789"
-	zero := "0"
-
-	upperOffset := rune('Ⓐ') - rune('A')
-	lowerOffset := rune('ⓐ') - rune('a')
-	posOffset := rune('①') - rune('1')
-	zeroOffset := rune('⓪') - rune('0')
-
-	offsetMap := map[string]rune{lowers: lowerOffset, uppers: upperOffset, positives: posOffset, zero: zeroOffset}
-
 	for _, c := range input {
+		result := string(c)
 		for key, offset := range offsetMap {
 			if strings.Contains(key, string(c)) {
-				results += string(c + offset)
-				results += " "
+				result = string(c+offset) + " "
+				break
 			}
 		}
+		results += result
 	}
 
 	return results

@@ -6,8 +6,8 @@ var testTable = []struct {
 	before string
 	after  string
 }{
-	{"hello bubs", "ⓗ ⓔ ⓛ ⓛ ⓞ ⓑ ⓤ ⓑ ⓢ "},
-	{"Zach Holman", "Ⓩ ⓐ ⓒ ⓗ Ⓗ ⓞ ⓛ ⓜ ⓐ ⓝ "},
+	{"hello, bubs!", "ⓗ ⓔ ⓛ ⓛ ⓞ , ⓑ ⓤ ⓑ ⓢ !"},
+	{"Zach Holman", "Ⓩ ⓐ ⓒ ⓗ  Ⓗ ⓞ ⓛ ⓜ ⓐ ⓝ "},
 }
 
 func TestBlubsTranslations(t *testing.T) {
