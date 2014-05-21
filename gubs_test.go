@@ -6,11 +6,11 @@ var testTable = []struct {
 	before string
 	after  string
 }{
-	{"hello, bubs!", "ⓗ ⓔ ⓛ ⓛ ⓞ , ⓑ ⓤ ⓑ ⓢ !"},
-	{"Zach Holman", "Ⓩ ⓐ ⓒ ⓗ  Ⓗ ⓞ ⓛ ⓜ ⓐ ⓝ"},
+	{"hello, bubs!", "ⓗⓔⓛⓛⓞ, ⓑⓤⓑⓢ!"},
+	{"Zach Holman", "Ⓩⓐⓒⓗ Ⓗⓞⓛⓜⓐⓝ"},
 }
 
-func TestBlubsTranslations(t *testing.T) {
+func TestGubsTranslations(t *testing.T) {
 	for _, test := range testTable {
 		actual := Tr(test.before)
 		if actual != test.after {

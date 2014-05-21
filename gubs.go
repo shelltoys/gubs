@@ -18,7 +18,7 @@ func Tr(input string) string {
 		result := string(c)
 		for key, offset := range offsetMap {
 			if strings.Contains(key, string(c)) {
-				result = string(c+offset) + " "
+				result = string(c + offset)
 				break
 			}
 		}
