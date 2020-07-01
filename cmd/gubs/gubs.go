@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/andrew-d/go-termutil"
-	"github.com/dpritchett/gubs"
+	"github.com/shelltoys/gubs"
 )
 
 func trReader(reader *bufio.Reader) {
