@@ -14,7 +14,7 @@ uploads:
   - name: bintray
     mode: binary
     target: https://api.bintray.com/content/shelltoys/binaries/{{ .ProjectName }}/{{ .Version }}/
-    username: goreleaser
+    username: dpritchett
 archives:
 - replacements:
     darwin: Darwin
