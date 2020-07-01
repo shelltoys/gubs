@@ -1,5 +1,7 @@
 `gubs` is a Go clone of Zach Holman's [bubs](https://github.com/holman/bubs). It bubblerizes letters.
 
+[ ![Download](https://api.bintray.com/packages/shelltoys/binaries/gubs/images/download.svg) ](https://bintray.com/shelltoys/binaries/gubs/_latestVersion)
+
 ## Example
 ```sh
 $ gubs Zach Holman
@@ -7,9 +9,7 @@ $ gubs Zach Holman
 ```
 
 ## Binary download
-http://gobuild.io/download/github.com/dpritchett/gubs/cmd/gubs
-
-I don't know the people behind this service but it does deliver freshly compiled binaries.
+Click the download badge above.
 
 ## Install from source
 ```sh
