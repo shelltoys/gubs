@@ -10,11 +10,6 @@ builds:
 - env:
   - CGO_ENABLED=0
   main: ./cmd/gubs/gubs.go
-uploads:
-  - name: bintray
-    mode: binary
-    target: https://api.bintray.com/content/shelltoys/binaries/{{ .ProjectName }}/{{ .Version }}/
-    username: dpritchett
 archives:
 - replacements:
     darwin: Darwin
